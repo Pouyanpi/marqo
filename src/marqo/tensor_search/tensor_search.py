@@ -1305,7 +1305,7 @@ def _lexical_search(
         if return_doc_ids:
             just_doc["_id"] = doc["_id"]
             just_doc["_score"] = doc["_score"]
-        res_list.append({**just_doc, "_highlights": []})
+        res_list.append({**just_doc, "_highlights": {}})
 
     end_postprocess_time = timer()
     total_postprocess_time = end_postprocess_time - start_postprocess_time
